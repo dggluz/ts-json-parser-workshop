@@ -73,14 +73,13 @@ describe('"foo" parser', () => {
     }
   });
 
-
   it('Fails if a long string is supplied', async () => {
     expect.assertions(1);
     try {
       // GIVEN:
       // A long string input
       const input = 'loooooong';
-  
+
       // WHEN:
       // Parsing the input with the fooParser
       await fooParser(input);
