@@ -1,4 +1,4 @@
-import { fromStr, map } from "../src";
+import { fromStr, map } from '../src';
 
 describe.skip('map parsers', () => {
   describe('UpperCased "foo" parser', () => {
