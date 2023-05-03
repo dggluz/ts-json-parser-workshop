@@ -159,7 +159,7 @@ describe.skip('"altAll" parser', () => {
     }
   });
 
-  it('Fails if the "baz" string is supplied', async () => {
+  it('Fails if the "bat" string is supplied', async () => {
     expect.assertions(1);
     try {
       // GIVEN:
