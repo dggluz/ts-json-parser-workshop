@@ -1,8 +1,18 @@
-type Parser <T> = (input: string) => Promise<{
+export type Parser <T> = (input: string) => Promise<{
   result: T;
   remaining: string;
 }>;
 
+/**
+ * ####### Ejercicio 1 (ejemplo): fooParser #######
+ * 
+ * Implementar fooParser, de tipo Parser<'foo'>, que parsea el string "foo".
+ * Si el input comienza con "foo", debe devolver una
+ * Promise<{resolved: 'foo', remaining: string}>, donde el remaining es la
+ * parte del input que viene después de "foo".
+ * Si el input no comienza con "foo", debe devolver una Promise rejecteada con
+ * un error descriptivo.
+ */
 export const fooParser: Parser<'foo'> = input => {
   const expected = 'foo';
 
