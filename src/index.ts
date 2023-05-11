@@ -474,3 +474,17 @@ export const digitsParser = ToDo('Implement digitsParser');
  * notaciones posibles.
  */
 export const numberParser = ToDo('Implement numberParser');
+
+/**
+ * ####### Ejercicio 23: pure #######
+ * 
+ * Ahora vamos a implementar una función utilitaria muy sencilla: pure.
+ * pure "mete" un valor en un Parser. Es decir, pure(1), devolverá un
+ * Parser<1>, pure('hola') un Parser<'hola'>, y así.
+ * 
+ * El Parser resultante, no consume ningún input.
+ * 
+ * Pista: puede que no le encuentres mucha utilidad a este Parser, por ahora,
+ * pero va a ser fundamental para poder crear nuestro Parser de arrays.
+ */
+export const pure = <T> (x: T): Parser<T> => ToDo('Implement pure');
