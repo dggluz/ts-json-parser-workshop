@@ -81,3 +81,14 @@ export const fromStr = <S extends string> (expected: S): Parser<S> =>
  */
 export const map = <A, B> (fn: (x: A) => B, parser: Parser<A>): Parser<B> =>
   ToDo('Implementar map');
+
+/**
+ * lift es el resultado de currificar map. Lo lindo que tiene es que recibe
+ * una función (x: A) => B y "la eleva" para convertirla en una función que
+ * trabaja con Parsers (es decir, en una (x: Parser<A>) => Parser<B>).
+ * Este lindo concepto de la programación funcional lo vamos a usar más
+ * adelante, con liftA2.
+ */
+export const liftA = <A, B> (fn: (x: A) => B) =>
+  (parser: Parser<A>) =>
+    map(fn, parser);
