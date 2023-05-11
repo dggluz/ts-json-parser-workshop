@@ -566,3 +566,14 @@ export const commaParser = ToDo('Implement commaParser');
  */
 export const _separatedByComma = <T> (elementParser: Parser<T>): Parser<T[]> =>
   ToDo('Implement _separatedByComma');
+
+/**
+ * ####### Ejercicio 29: separatedByComma #######
+ * 
+ * Ahora sí, hagamos separaredByComma como corresponde: sin esperar esa coma
+ * inicial.
+ * 
+ * Pista: delegar en _separaredByComma. Por algo la hicimos, ¿no?
+ */
+export const separatedByComma = <T> (elementParser: Parser<T>): Parser<T[]> =>
+  ToDo('Implement separatedByComma');
