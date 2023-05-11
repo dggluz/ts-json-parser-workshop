@@ -12,6 +12,24 @@ const ToDo = (message: string) => () => {
 type GetParserType <T> = T extends Parser<infer U> ? U : never;
 
 /**
+ * El objetivo final será implementar un Parser<JsonValue>. JsonValue
+ * representa todos los tipos de valores válidos para JSON: null, booleanos,
+ * strings, números, arrays y objetos. Como ven, es un tipo recursivo: podemos
+ * tener arrays de objetos de arrays de objetos de objetos de arrays, y así.
+ */
+type JsonValue =
+  | null
+  | boolean
+  | string
+  | number
+  | JsonValue[]
+  | JsonObject
+;
+interface JsonObject {
+  [key: string]: JsonValue;
+}
+
+/**
  * ####### Ejercicio 1 (ejemplo): fooParser #######
  * 
  * Implementar fooParser, de tipo Parser<'foo'>, que parsea el string "foo".
