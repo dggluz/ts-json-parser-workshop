@@ -336,3 +336,16 @@ export const keepLeft = ToDo('Implement keepLeft');
  * resultado del segundo Parser, y no el primero.
  */
 export const keepRight = ToDo('Implement keepRight');
+
+/**
+ * ####### Ejercicio 14: keepMiddle #######
+ * 
+ * keepMiddle nos será muy útil muy pronto. Hace lo que el nombre (y el tipo de
+ * datos) dice: recibirá 3 Parsers, los "enganchará" entre sí, y devolverá el
+ * resultado del segundo.
+ */
+export const keepMiddle = <L, M, R> (
+  left: Parser<L>,
+  middle: Parser<M>,
+  right: Parser<R>,
+): Parser<M> => ToDo('Implement keepMiddle');
