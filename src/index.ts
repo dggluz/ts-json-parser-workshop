@@ -316,3 +316,15 @@ export const liftA2 = <A, B, C> (
  * debería ser una pavada.
  */
 // const concat = ;
+
+/**
+ * ####### Ejercicio 12: keepLeft #######
+ * 
+ * Ahora, vamos a implementar keepLeft, que recibe dos Parsers, los "engancha"
+ * y devuelve un Parser cuyo resultado es el del primer Parser. Es decir:
+ * keepLeft(fromStr('foo'), fromStr('bar')), debe devolver Parser<'foo'>, PERO
+ * que "consuma" el texto "foobar" del input.
+ * 
+ * Pista: liftA2 es una función muy poderosa.
+ */
+export const keepLeft = ToDo('Implement keepLeft');
