@@ -150,7 +150,7 @@ export const map = <A, B> (fn: (x: A) => B, parser: Parser<A>): Parser<B> =>
   ToDo('Implementar map');
 
 /**
- * lift es el resultado de currificar map. Lo lindo que tiene es que recibe
+ * liftA es el resultado de currificar map. Lo lindo que tiene es que recibe
  * una función (x: A) => B y "la eleva" para convertirla en una función que
  * trabaja con Parsers (es decir, en una (x: Parser<A>) => Parser<B>).
  * Este lindo concepto de la programación funcional lo vamos a usar más
@@ -292,3 +292,15 @@ export const map2 = <A, B, C> (
   parserA: Parser<A>,
   parserB: Parser<B>,
 ): Parser<C> => ToDo('Implementar map2');
+
+/**
+ * Así como liftA "eleva" una función de un parámetro, liftA2 hace lo propio
+ * con funciones de dos parámetros. Esta función nos va a resultar
+ * tremendamente poderosa. Como muestra, basta hacer el ejercicio 11.b.
+ */
+export const liftA2 = <A, B, C> (
+  fn: (x: A, y: B) => C,
+) => (
+  parserA: Parser<A>,
+  parserB: Parser<B>,
+): Parser<C> => map2(fn, parserA, parserB);
