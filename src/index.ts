@@ -92,3 +92,16 @@ export const map = <A, B> (fn: (x: A) => B, parser: Parser<A>): Parser<B> =>
 export const liftA = <A, B> (fn: (x: A) => B) =>
   (parser: Parser<A>) =>
     map(fn, parser);
+
+/**
+ * ####### Ejercicio 4: nullParser #######
+ * 
+ * JSON está compuesto por varios valores: null, booleanos, strings, números,
+ * arrays y objetos. Vamos a ir implementando los distintos Parsers de a uno y
+ * en ese orden.
+ * 
+ * Combinando lo que ya hicimos, ¡estamos en condiciones de escribir un Parser
+ * de null! El parser de null debe procesar el string "null" y devolver un
+ * valor null (no un string, sino un valor cuyo tipo de dato sea null).
+ */
+export const nullParser: Parser<null> = ToDo('Implementar nullParser');
