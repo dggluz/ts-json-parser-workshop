@@ -1,5 +1,5 @@
 // No darle bola a esta función.
-const ToDo = (message: string) => () => {
+const ToDo = (message: string) => (...args: any[]): any => {
   throw new Error(`TODO: ${message}`);
 };
 
