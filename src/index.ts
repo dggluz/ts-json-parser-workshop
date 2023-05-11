@@ -552,3 +552,17 @@ export const spaceParser = ToDo('Implement spaceParser');
  * y/o seguida de cualquier cantidad de espacios.
  */
 export const commaParser = ToDo('Implement commaParser');
+
+/**
+ * ####### Ejercicio 28: _separatedByComma #######
+ * 
+ * Ya estamos cerca de hacer nuestro Parser de arrays. Nos faltaría hacer un
+ * Parser que procese elementos separados por comas, PERO ANTES, hagamos una
+ * versión un poquito más sencilla. _separatedByComma va a procesar cualquier
+ * cantidad de pares "coma-elemento".
+ * 
+ * Por ejemplo: _separatedByComma(numberParser) podrá procesar el input:
+ * ", 1, 2, 3" (noten la coma inicial); y su resultado será: [1, 2, 3].
+ */
+export const _separatedByComma = <T> (elementParser: Parser<T>): Parser<T[]> =>
+  ToDo('Implement _separatedByComma');
