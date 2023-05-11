@@ -3,6 +3,11 @@ export type Parser <T> = (input: string) => Promise<{
   remaining: string;
 }>;
 
+// No darle bola a esta función es sólo una función.
+const ToDo = (message: string) => () => {
+  throw new Error(`TODO: ${message}`);
+};
+
 /**
  * ####### Ejercicio 1 (ejemplo): fooParser #######
  * 
@@ -50,9 +55,8 @@ export const fooParser: Parser<'foo'> = input => {
  * 
  * Pista: copiar y pegar el código de fooParser, puede ser un buen comienzo.
  */
-export const fromStr = <S extends string> (expected: S): Parser<S> => {
-  throw new Error('TODO: implement fromStr');
-};
+export const fromStr = <S extends string> (expected: S): Parser<S> =>
+  ToDo('Implementar fromStr');
 
 /**
  * ####### Ejercicio 2b: fooParser #######
