@@ -507,3 +507,29 @@ export const prepend = liftA2(
     ...xs,
   ]
 );
+
+/**
+ * ####### Ejercicio 25: zeroOrMore & oneOrMore #######
+ * 
+ * zeroOrMore y oneOrMore son exactamente como regexStar y regexPlus
+ * (respectivamente), pero en lugar de recibir Parsers de string, y concatenar
+ * esos strings para devolver Parsers de strings, reciben Parser<T>, y
+ * devuleven Parser<T[]>.
+ * 
+ * Veamos un ejemplo: si el resultado de parsear "foofoofoo" con
+ * regexStar(fromStr('foo')) es "foofoofoo", el resultado de parsear ese mismo
+ * input, pero con zeroOrMore(fromStr('foo')), será ['foo', 'foo', 'foo'].
+ * 
+ * Pista: ¿cuál es el equivalente al string vacío, pero en arrays?, ¿cuál es el
+ * equivalente a la concatenación de strings, pero para arrays?
+ * 
+ * Pista 2: prepend y pure van a ser importantes acá.
+ * 
+ * Pista 3: sí, insisto: estas funciones son MUY parecidas a regexStar y
+ * regexPlus.
+ */
+export const zeroOrMore = <T> (elementParser: Parser<T>): Parser<T[]> =>
+  ToDo('Implement zeroOrMore');
+
+export const oneOrMore = <T> (elementParser: Parser<T>): Parser<T[]> =>
+  ToDo('Implement oneOrMore');
