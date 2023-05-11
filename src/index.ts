@@ -533,3 +533,14 @@ export const zeroOrMore = <T> (elementParser: Parser<T>): Parser<T[]> =>
 
 export const oneOrMore = <T> (elementParser: Parser<T>): Parser<T[]> =>
   ToDo('Implement oneOrMore');
+
+/**
+ * ####### Ejercicio 26: spaceParser #######
+ * 
+ * Un parser sencillito: el spaceParser debe parsear cualquier cantidad de
+ * espacios (de 0 a infinito). A los fines de nuestro humilde propósito,
+ * consideraremos sólo el caracter espacio "normal" (el de la barra
+ * espaciadora). Quien tenga ganas, luego podrá sumar otros caracteres de
+ * espacio (como el \t).
+ */
+export const spaceParser = ToDo('Implement spaceParser');
