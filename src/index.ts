@@ -105,3 +105,22 @@ export const liftA = <A, B> (fn: (x: A) => B) =>
  * valor null (no un string, sino un valor cuyo tipo de dato sea null).
  */
 export const nullParser: Parser<null> = ToDo('Implementar nullParser');
+
+/**
+ * ####### Ejercicio 5: alt #######
+ * 
+ * Ya hicimos el Parser de null, ¡buenísimo! El siguiente valor de JSON son los
+ * booleanos, pero para hacer el Parser de booleanos, primero necesitamos hacer
+ * la función alt.
+ * 
+ * alt es una función que recibe dos Parsers y que devuelve un Parser que
+ * primero intenta parsear con ambos Parsers. Los prueba en orden, si alguno
+ * funciona, devuelve ese resultado. Si ambos fallan, el Parser resultante
+ * también falla.
+ * 
+ * Pista: usar async/await puede volver a ser de ayuda.
+ */
+export const alt = <A, B> (
+  parserA: Parser<A>,
+  parserB: Parser<B>,
+): Parser<A | B> => ToDo('Implementar alt');
