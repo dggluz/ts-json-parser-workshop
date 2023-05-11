@@ -461,3 +461,16 @@ export const digitParser = ToDo('Implement digitParser');
  * plural. Es decir, parsea 1 o más dígitos.
  */
 export const digitsParser = ToDo('Implement digitsParser');
+
+/**
+ * ####### Ejercicio 22: numberParser #######
+ * 
+ * Con lo que vimos, ya podemos hacer nuestro numberParser. Eso sí: es un
+ * numberParser humilde y SÓLO SOPORTAREMOS NÚMEROS NATURALES (y en la
+ * notación cardinal habitual, la de toda la vida).
+ * 
+ * Sí: nuestro Parser es humilde, pero como tarea para el hogar, puede quedar
+ * implementar los números negativos, los fraccionales y las distintas
+ * notaciones posibles.
+ */
+export const numberParser = ToDo('Implement numberParser');
