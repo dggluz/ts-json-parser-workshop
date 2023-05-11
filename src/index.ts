@@ -153,3 +153,16 @@ export const alt = <A, B> (
  * booleanParser!
  */
 export const booleanParser: Parser<boolean> = ToDo('Implementar booleanParser');
+
+/**
+ * ####### Ejercicio 7: jsonParser #######
+ * 
+ * Ya podemos parsear nulls y booleanos. ¿Y si los combinamos para armar
+ * nuestro primer jsonParser?
+ * 
+ * Implementar jsonParser e ir agregándole los Parsers correspondientes a
+ * medida de que los vayamos haciendo.
+ */
+export const jsonParser: Parser<JsonValue> = ToDo(
+  'Implementar jsonParser (sólo con nulls y booleanos, por ahora)'
+);
