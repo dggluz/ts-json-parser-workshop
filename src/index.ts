@@ -577,3 +577,15 @@ export const _separatedByComma = <T> (elementParser: Parser<T>): Parser<T[]> =>
  */
 export const separatedByComma = <T> (elementParser: Parser<T>): Parser<T[]> =>
   ToDo('Implement separatedByComma');
+
+/**
+ * ####### Ejercicio 30: arrayParser #######
+ * 
+ * ¡Finalmente! Estamos en condiciones de hacer nuestro arrayParser. Notar que
+ * un array es un conjunto de cero o más elementos, separados por comas y
+ * encerrados entre corchetes ("[" y "]"), con eventuales espacios.
+ * 
+ * Pista: los elementos... ¿de qué tipo son? Sí, arrayParser eventualmente será
+ * recursiva. la conversión-η puede volver a ayudarnos.
+ */
+export const arrayParser: Parser<JsonValue[]> = ToDo('Implement arrayParser');
