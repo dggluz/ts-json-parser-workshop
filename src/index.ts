@@ -623,3 +623,23 @@ export const keyValueParser: Parser<KeyValuePair> = ToDo(
  * Pista: un objeto tiene muchas similitudes con un array.
  */
 export const objectParser: Parser<JsonObject> = ToDo('Implement objectParser');
+
+/**
+ * ####### Ejercicio 33: jsonParser #######
+ * 
+ * ¡Al fin! Tenemos todos los ingredientes. El último test es probar todo
+ * junto. Si fuiste actualizando el jsonParser del ejercicio 7, no tenés que
+ * hacer nada más. Sino, simplemente agregale los distintos parsers que fuimos
+ * haciendo.
+ */
+
+/**
+ * ¡Felicitaciones! Hiciste un Parser de JSON, desde cero, sin librerías y con
+ * programación funcional.
+ * 
+ * BONUS TRACK: si te animás, corregile lo que haga falta para que el Parser de
+ * JSON tenga todas las de la ley (caracteres de escape para strings,
+ * caracteres de spacios, todos los formatos numéricos, etc.). Para ello, podés
+ * consulta la especificación:
+ * https://www.ecma-international.org/publications-and-standards/standards/ecma-404/
+ */
