@@ -246,3 +246,27 @@ export const concat = <A extends string, B extends string> (
   parserA: Parser<A>,
   parserB: Parser<B>,
 ): Parser<`${A}${B}`> => ToDo('Implementar concat');
+
+/**
+ * ####### Ejercicio 10: concatAll #######
+ * 
+ * Así como generalizamos alt en altAll, haciéndola variádica, podemos
+ * generalizar concat en concatAll, haciéndola variádica. Implementemos,
+ * entonces, concatAll.
+ * 
+ * Pista: será muy parecida a altAll.
+ * 
+ * Bonus: el tipo de retorno de concatAll es Parser<string>. Pero podemos
+ * convertirlo en algo mucho más potente, si "le clavamos" un:
+ * as Parser<ConcatAll<P>>
+ * 
+ * Sí, lamentablemente deberemos usar "as" en este caso. El tipo ConcatAll
+ * está definido más arriba y nos permite que hacer
+ * concatAll(fromStr('foo'), fromStr('bar'), fromStr('baz')), nos devuelva un
+ * Parser<'foobarbaz'>, concatenando una cantidad arbitraria de strings
+ * literales.
+ * 
+ * En cualquier caso, dejar el retorno como Parser<string> también es válido.
+ */
+export const concatAll = <P extends Parser<string>[]> (...parsers: P) =>
+  ToDo('Implementar concatAll');
