@@ -304,3 +304,15 @@ export const liftA2 = <A, B, C> (
   parserA: Parser<A>,
   parserB: Parser<B>,
 ): Parser<C> => map2(fn, parserA, parserB);
+
+/**
+ * ####### Ejercicio 11.b: reimplementar concat #######
+ * 
+ * Reimplementar concat, usando liftA2. Descomentá la siguiente línea de
+ * código, completala y borrá la implementación de concat de más arriba.
+ * 
+ * Pista: dejate llevar por la abstracción. Si podés hacer una función
+ * (x: A, y: B) => C, hacer una (x: Parser<A>, y: Parser<B>) => Parser<C>
+ * debería ser una pavada.
+ */
+// const concat = ;
