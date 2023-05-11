@@ -613,3 +613,13 @@ type KeyValuePair = {
 export const keyValueParser: Parser<KeyValuePair> = ToDo(
   'Implement keyValueParser'
 );
+
+/**
+ * ####### Ejercicio 32: objectParser #######
+ * 
+ * Último Parser de un valor JSON: el Parser de objetos. Ya tenemos todo lo que
+ * necesitamos, ¡manos a la obra!
+ * 
+ * Pista: un objeto tiene muchas similitudes con un array.
+ */
+export const objectParser: Parser<JsonObject> = ToDo('Implement objectParser');
