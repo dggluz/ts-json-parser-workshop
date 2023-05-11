@@ -270,3 +270,25 @@ export const concat = <A extends string, B extends string> (
  */
 export const concatAll = <P extends Parser<string>[]> (...parsers: P) =>
   ToDo('Implementar concatAll');
+
+/**
+ * ####### Ejercicio 11: map2 #######
+ * 
+ * Así como hicimos map, que toma una función (x: A) => B y una Parser<A>, y
+ * nos devuelve un Parser<B>, podemos generalizar esa abstracción a otro
+ * parámetro. Es decir: recibir una función de DOS parámetros (en lugar de
+ * uno): fn será (x: A, y: B) => C
+ * 
+ * Luego, recibimos también dos Parsers: Parser<A> y Parser<B> y devolvemos
+ * Parser<C>.
+ * 
+ * map2 será vital de acá en más para construir Parsers.
+ * 
+ * Pista: partir de la implementación de concat, puede ser una buena idea.
+ * Debemos mantener la misma idea de "encadenar" los Parsers.
+ */
+export const map2 = <A, B, C> (
+  fn: (x: A, y: B) => C,
+  parserA: Parser<A>,
+  parserB: Parser<B>,
+): Parser<C> => ToDo('Implementar map2');
