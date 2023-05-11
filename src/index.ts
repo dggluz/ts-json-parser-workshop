@@ -390,3 +390,24 @@ export const regexPlus = (parser: Parser<string>): Parser<string> =>
  * Pista: volver a lo básico.
  */
 export const charParser: Parser<string> = ToDo('Implement charParser');
+
+/**
+ * ####### Ejercicio 17: normalCharParser #######
+ * 
+ * Ya estamos encaminados para hacer nuestro sigueinte Parser de un valor de
+ * JSON: el Parser de string. Pero antes, vamos a tener que procesar de un modo
+ * diferenciado a los caracteres "normales" y los especiales. A los fines de
+ * este ejercicio, vamos a considerar que los caracteres especiales son
+ * únicamente las comillas dobles (") y la contrabarra (\). Hagamos, pues,
+ * normalCharParser, que es un Parser de un solo caracter, pero ese caracter
+ * debe ser "normal" (es decir, "no especial").
+ * 
+ * Pista: un detalle de implementación de map puede ser de mucha ayuda.
+ * 
+ * Pista 2: escapar el caracter contrabarra (\) requiere utilizar una
+ * contrabarra extra. En general, en el código, siempre vas a ver las
+ * contrabarras de a dos.
+ */
+export const normalCharParser: Parser<string> = ToDo(
+  'Implement normalCharParser'
+);
