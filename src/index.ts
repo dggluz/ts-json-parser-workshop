@@ -544,3 +544,11 @@ export const oneOrMore = <T> (elementParser: Parser<T>): Parser<T[]> =>
  * espacio (como el \t).
  */
 export const spaceParser = ToDo('Implement spaceParser');
+
+/**
+ * ####### Ejercicio 27: commaParser #######
+ * 
+ * Otro parser sencillito: commaParser sólo debe parsear una coma, precedida
+ * y/o seguida de cualquier cantidad de espacios.
+ */
+export const commaParser = ToDo('Implement commaParser');
