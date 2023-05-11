@@ -3,10 +3,13 @@ export type Parser <T> = (input: string) => Promise<{
   remaining: string;
 }>;
 
-// No darle bola a esta función es sólo una función.
+// No darle bola a esta función.
 const ToDo = (message: string) => () => {
   throw new Error(`TODO: ${message}`);
 };
+
+// No darle bola a esta función de tipos.
+type GetParserType <T> = T extends Parser<infer U> ? U : never;
 
 /**
  * ####### Ejercicio 1 (ejemplo): fooParser #######
