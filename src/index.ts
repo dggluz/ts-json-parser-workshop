@@ -124,3 +124,11 @@ export const alt = <A, B> (
   parserA: Parser<A>,
   parserB: Parser<B>,
 ): Parser<A | B> => ToDo('Implementar alt');
+
+/**
+ * ####### Ejercicio 6: booleanParser #######
+ * 
+ * Ahora sí, con ayuda de alt, de map y de fromStr, ¡podemos implementar
+ * booleanParser!
+ */
+export const booleanParser: Parser<boolean> = ToDo('Implementar booleanParser');
