@@ -41,3 +41,15 @@ export const fooParser: Parser<'foo'> = input => {
     }...". Expecting "${expected}"`)
   );
 };
+
+/**
+ * ####### Ejercicio 2: fromStr #######
+ * 
+ * Implementar la función fromStr, que recibe un string y devuelve un Parser
+ * de ese string.
+ * 
+ * Pista: copiar y pegar el código de fooParser, puede ser un buen comienzo.
+ */
+export const fromStr = <S extends string> (expected: S): Parser<S> => {
+  throw new Error('TODO: implement fromStr');
+};
