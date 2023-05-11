@@ -431,3 +431,16 @@ export const normalCharParser: Parser<string> = ToDo(
 export const escapedCharParser: Parser<string> = ToDo(
   'Implement escapedCharParser'
 );
+
+/**
+ * ####### Ejercicio 19: stringParser #######
+ * 
+ * Finalmente, ¡estamos en condiciones de hacer nuestro stringParser!
+ * 
+ * Recordar que en JSON, un string es un texto arbitrario que está entre dos
+ * comillas dobles (").
+ * 
+ * Pista: un texto arbitrario, serían cero o más caracteres normales o
+ * correctamente escapados.
+ */
+export const stringParser = ToDo('Implement stringParser');
