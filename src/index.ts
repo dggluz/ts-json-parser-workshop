@@ -1,8 +1,3 @@
-export type Parser <T> = (input: string) => Promise<{
-  result: T;
-  remaining: string;
-}>;
-
 // No darle bola a esta función.
 const ToDo = (message: string) => () => {
   throw new Error(`TODO: ${message}`);
@@ -10,6 +5,57 @@ const ToDo = (message: string) => () => {
 
 // No darle bola a esta función de tipos.
 type GetParserType <T> = T extends Parser<infer U> ? U : never;
+
+// Ignorar también esta otra función de tipos (¡vaya que es fea!):
+type Join<A, R extends string = ""> = A extends [infer First, ...infer Rest] ?
+  Join<Rest, R extends ""
+    ? `${First & string}`
+    : `${R}${First & string}`>
+  : R;
+
+// ¡Y esta! Ignorarla con fuerza:
+type ConcatAll <P extends Parser<string>[]> = Join<{
+  [K in keyof P]: GetParserType<P[K]>
+}>;
+
+
+// ##########################################
+// ### AHORA SÍ, DAR BOLA A PARTIR DE ACÁ ###
+// ##########################################
+
+/**
+ * Un Parser es, antes que nada, algo que transforma un input en un output. Es
+ * decir: un Parser es una FUNCIÓN. Y como el input es (para JSON) un string,
+ * el parámetro de la función será un string. Hasta este punto, podemos afirmar
+ * que un Parser es:
+ * type Parser = (input: string) => unknown;
+ * 
+ * Ahora bien. Un Parser es un Parser "de algo". Es decir, su resultado, podrá
+ * ser de algún tipo determinado. Pero ¿de qué tipo?: y... de alguno. Vamos a
+ * parametrizar el tipo de Parser, para que pase a ser un Parser "de algo":
+ * type Parser <T> = (input: string) => T;
+ * 
+ * Luego, nuestros Parsers pueden "fallar". Es decir, si hago
+ * JSON.parse('hola'), desde luego que va a fallar, porque "hola" no es un JSON
+ * válido. Ahora bien, hay muchas formas de representar que algo puede fallar.
+ * Una forma de hacerlo (y es la que elegiremos), es usando Promise. Si el
+ * resultado falla, será una Promise rechazada ("rejected", vamos). Si no
+ * falla, será una Promise resulta (o "resolved"). En este punto, nuestro
+ * Parser queda así:
+ * type Parser <T> = (input: string) => Promise<T>;
+ * 
+ * Por último, nuestros Parsers, serán Parsers "chiquitos". Es decir, querremos
+ * combinar varios Parsers chiquitos y simples para formar Parsers más grandes
+ * y complejos. Por eso, para poder "enganchar" Parsers entre sí, cada Parser
+ * deberá devolver no sólo su resultado (resultado de procesar una parte del
+ * input), sino que también deberá devolver "el resto" del input (lo que no
+ * procesó), para que puedan procesarlo Parsers subsiguientes.
+ * Es así que obtenemos el tipo definitivo de nuestro Parser, que es:
+ */
+export type Parser <T> = (input: string) => Promise<{
+  result: T;
+  remaining: string;
+}>;
 
 /**
  * El objetivo final será implementar un Parser<JsonValue>. JsonValue
