@@ -444,3 +444,12 @@ export const escapedCharParser: Parser<string> = ToDo(
  * correctamente escapados.
  */
 export const stringParser = ToDo('Implement stringParser');
+
+/**
+ * ####### Ejercicio 20: digitParser #######
+ * 
+ * Lo que sigue sería hacer el Parser de números, pero vamos a hacerlo de a
+ * poquitos. Comenzaremos haciendo un Parser de un dígito numérico (0, 1, 2, 3,
+ * 4, 5, 6, 7, 8 o 9).
+ */
+export const digitParser = ToDo('Implement digitParser');
