@@ -411,3 +411,23 @@ export const charParser: Parser<string> = ToDo('Implement charParser');
 export const normalCharParser: Parser<string> = ToDo(
   'Implement normalCharParser'
 );
+
+/**
+ * ####### Ejercicio 18: escapedCharParser #######
+ * 
+ * Así como hicimos nuestro normalCharParser, tendremos que hacer un
+ * escapedCharParser que, básicamente, puede procesar (solamente) los
+ * caracteres especiales, PERO ESCAPADOS. Recordar que los caracteres
+ * especiales son (para el ejercicio) la comilla doble (") y la contrabarra.
+ * 
+ * Es decir, nuestro parser debe poder procesar \" y \\. PERO el resultado debe
+ * ser el caracter sin escapar.
+ * 
+ * Pista: divide y reinarás.
+ * 
+ * Pista 2: recuerden que escapar el caracter contrabarra (\) requiere utilizar
+ * una contrabarra extra.
+ */
+export const escapedCharParser: Parser<string> = ToDo(
+  'Implement escapedCharParser'
+);
