@@ -166,3 +166,18 @@ export const booleanParser: Parser<boolean> = ToDo('Implementar booleanParser');
 export const jsonParser: Parser<JsonValue> = ToDo(
   'Implementar jsonParser (sólo con nulls y booleanos, por ahora)'
 );
+
+/**
+ * ####### Ejercicio 8: altAll #######
+ * 
+ * Buenísmo, ya combinamos el Parser de null y el Parser de booleanos para
+ * obtener nuestra primer versión del jsonParser. Pero, a medida de que le
+ * agreguemos más Parsers, sería lindo contar con una versión variádica de alt
+ * (es decir, generalizada para cualquier cantidad de argumentos).
+ * 
+ * Pista: tiene algo de parecido a hacer una sumatoria, o a implementar el
+ * Array.some.
+ */
+export const altAll = <P extends Parser<any>[]> (
+  ...parsers: P
+): Parser<GetParserType<P[number]>> => ToDo('Implementar altAll');
