@@ -181,3 +181,22 @@ export const jsonParser: Parser<JsonValue> = ToDo(
 export const altAll = <P extends Parser<any>[]> (
   ...parsers: P
 ): Parser<GetParserType<P[number]>> => ToDo('Implementar altAll');
+
+/**
+ * ####### Ejercicio 9: concat #######
+ * 
+ * alt no es la única forma en la que podemos combinar dos Parsers. Podemos,
+ * por ejemplo, hacer concat, que va a recibir dos Parsers de string y devolver
+ * un nuevo Parser, de la concatenación de los strings originales. Por ejemplo,
+ * concat(fromStr('foo'), fromStr('bar')), debería devolvernos un
+ * Parser<'foobar'>. ¡Implementemos concat!
+ * 
+ * Pista: usar async/await puede ser nuevamente de ayuda.
+ * 
+ * Pista2: si "encadenamos" dos Parsers (y es lo que queremos hacer), el output
+ * del primer Parser, tendrá que ser el input del siguiente.
+ */
+export const concat = <A extends string, B extends string> (
+  parserA: Parser<A>,
+  parserB: Parser<B>,
+): Parser<`${A}${B}`> => ToDo('Implementar concat');
