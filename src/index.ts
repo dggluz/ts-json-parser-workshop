@@ -453,3 +453,11 @@ export const stringParser = ToDo('Implement stringParser');
  * 4, 5, 6, 7, 8 o 9).
  */
 export const digitParser = ToDo('Implement digitParser');
+
+/**
+ * ####### Ejercicio 21: digitsParser #######
+ * 
+ * Vamos pasito a pasito. El digitsParser es como el digitParser, pero en
+ * plural. Es decir, parsea 1 o más dígitos.
+ */
+export const digitsParser = ToDo('Implement digitsParser');
