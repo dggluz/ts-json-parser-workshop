@@ -380,3 +380,13 @@ export const regexStar = (parser: Parser<string>): Parser<string> =>
 
 export const regexPlus = (parser: Parser<string>): Parser<string> =>
   ToDo('Implement regexPlus');
+
+/**
+ * ####### Ejercicio 16: charParser #######
+ * 
+ * Vamos a hacer un Parser de un sólo caracter. Es muy sencillo: consume sólo
+ * un caracter, cualquiera sea. Si el input es un string vacío, falla.
+ * 
+ * Pista: volver a lo básico.
+ */
+export const charParser: Parser<string> = ToDo('Implement charParser');
