@@ -53,3 +53,12 @@ export const fooParser: Parser<'foo'> = input => {
 export const fromStr = <S extends string> (expected: S): Parser<S> => {
   throw new Error('TODO: implement fromStr');
 };
+
+/**
+ * ####### Ejercicio 2b: fooParser #######
+ * 
+ * Reimplementar el parser fooParser, delegando en la función fromStr.
+ * Borrar la implementación de fooParser de más arriba, descomentar la
+ * de la próxima lína de código y completar.
+ */
+// export const fooParser: Parser<'foo'> = ;
