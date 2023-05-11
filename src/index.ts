@@ -589,3 +589,27 @@ export const separatedByComma = <T> (elementParser: Parser<T>): Parser<T[]> =>
  * recursiva. la conversión-η puede volver a ayudarnos.
  */
 export const arrayParser: Parser<JsonValue[]> = ToDo('Implement arrayParser');
+
+// Este tipo lo vamos a necesitar inmediatamente:
+type KeyValuePair = {
+  key: string;
+  value: JsonValue;
+}
+
+/**
+ * ####### Ejercicio 31: keyValueParser #######
+ * 
+ * Ya tenemos el Parser de arrays... ¡nos queda sólo hacer el de objetos!
+ * Pero antes, hagamos un Parser de un par "clave-valor". En JSON, la clave de
+ * un par clave valor ES un string. Y el valor, bueno, es un valor válido de
+ * JSON (incluídos otros objetos). Sí, nuevamente la recursividad. Entre la
+ * clave y el valor, hay un caracter dos puntos (:) y eventuales espacios en
+ * blanco.
+ * 
+ * Hagamos, pues, el keyValueParser.
+ * 
+ * Pista: es el momento de map2 de brillar.
+ */
+export const keyValueParser: Parser<KeyValuePair> = ToDo(
+  'Implement keyValueParser'
+);
