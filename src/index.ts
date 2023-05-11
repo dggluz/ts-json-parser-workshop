@@ -328,3 +328,11 @@ export const liftA2 = <A, B, C> (
  * Pista: liftA2 es una función muy poderosa.
  */
 export const keepLeft = ToDo('Implement keepLeft');
+
+/**
+ * ####### Ejercicio 13: keepRight #######
+ * 
+ * El nombre lo dice todo: keepRight es como keepLeft, pero devuelve el
+ * resultado del segundo Parser, y no el primero.
+ */
+export const keepRight = ToDo('Implement keepRight');
