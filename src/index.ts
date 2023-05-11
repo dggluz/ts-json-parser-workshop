@@ -488,3 +488,22 @@ export const numberParser = ToDo('Implement numberParser');
  * pero va a ser fundamental para poder crear nuestro Parser de arrays.
  */
 export const pure = <T> (x: T): Parser<T> => ToDo('Implement pure');
+
+/**
+ * ####### Ejercicio 24: prepend #######
+ * 
+ * Vamos a hacer otra función utilitaria: prepend. El tipo de prepend es:
+ * <T> (elementParser: Parser<T>, elementsParser: Parser<T[]>) => Parser<T[]>
+ * 
+ * Hace lo que el nombre (y ese tipo) dicen: recibe un Parser de un elemento,
+ * otro parser de un array de elementos (del mismo tipo) y devuelve un Parser
+ * que mete el elemento al comienzo del array.
+ * 
+ * Pista: liftA2 vale oro.
+ */
+export const prepend = liftA2(
+  <T> (x: T, xs: T[]) => [
+    x,
+    ...xs,
+  ]
+);
