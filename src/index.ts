@@ -349,3 +349,34 @@ export const keepMiddle = <L, M, R> (
   middle: Parser<M>,
   right: Parser<R>,
 ): Parser<M> => ToDo('Implement keepMiddle');
+
+/**
+ * ####### Ejercicio 15: regexStar & regexPlus #######
+ * 
+ * Acá es donde la cosa se pone muy linda. Vamos a implementar dos funciones:
+ * regexStar y regexPlus, llamadas así por su analogía con los correspondientes
+ * operadores en las expresiones regulares (*, también conocido como estrella
+ * de Kleene o simplemente "operador estralla", y +, conocido sólamente como
+ * "operador suma").
+ * 
+ * regexStar, recibirá un Parser<string> y devolverá un Parser<string>, que
+ * parsea de 0 a infinitas veces el string original. Por ejemplo:
+ * regexStar(fromStr('foo')), devolverá un Parser que podrá procesar el string
+ * vacío, el string "foo", el string "foofoo", el string "foofoofoo", y así.
+ * 
+ * regexPlus hará exactamente lo mismo que regexStar, pero no podrá procesar el
+ * string vacío.
+ * 
+ * Pista: implementarl estas funciones por separado es muy difícil, pero
+ * implementarlas juntas es sencillo (implementar cada una, asumiendo que
+ * existe la otra). Es decir: son funciones mutuamente recursivas. 🤯🤯🤯🤯🤯
+ * 
+ * Pista 2: si caes en una recursión infinita, no desesperes, vas por el buen
+ * camino. La conversión-η (o "conversión eta") puede ser muy útil para salir
+ * de esta recursión infinita.
+ */
+export const regexStar = (parser: Parser<string>): Parser<string> =>
+  ToDo('Implement regexStar');
+
+export const regexPlus = (parser: Parser<string>): Parser<string> =>
+  ToDo('Implement regexPlus');
