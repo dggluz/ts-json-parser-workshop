@@ -66,3 +66,18 @@ export const fromStr = <S extends string> (expected: S): Parser<S> =>
  * de la próxima lína de código y completar.
  */
 // export const fooParser: Parser<'foo'> = ;
+
+/**
+ * ####### Ejercicio 3: map #######
+ * 
+ * Implementar la función map, que toma como parámetro una función y un Parser
+ * y transforma el "result" del Parser, usando la función.
+ * 
+ * Pista 1: recordar que los Parsers son en sí mismos funciones que devuelven
+ * una Promesa. Usar async/await puede ayudar.
+ * 
+ * Pista 2: en algún punto, tendremos que aplicar el parser que recibimos por
+ * parámetro.
+ */
+export const map = <A, B> (fn: (x: A) => B, parser: Parser<A>): Parser<B> =>
+  ToDo('Implementar map');
