@@ -5,8 +5,10 @@
   "main": "build/index.js",
   "types": "build/index.d.ts",
   "scripts": {
-    "build": "rm -rf build && tsc",
-    "build-test-reporter": "rm -rf progressive-reporter/dist && tsc --project progressive-reporter/tsconfig.json",
+    "build-repl": "rm -rf repl/build && tsc --project repl/tsconfig.json",
+    "build-test-reporter": "rm -rf progressive-reporter/build && tsc --project progressive-reporter/tsconfig.json",
+    "demo": "npm run build-repl && node repl/build/repl.js build",
+    "dev": "rm -rf build && tsc --watch",
     "run-tests": "jest --watchAll",
     "test": "npm run build-test-reporter && npm run run-tests"
   },
@@ -31,6 +33,7 @@
     "@types/jest": "^29.5.1",
     "chalk": "^4.1.2",
     "jest": "^29.5.0",
+    "node-watch": "^0.7.4",
     "ts-jest": "^29.1.0",
     "ts-node": "^10.9.1",
     "typescript": "^5.0.4"

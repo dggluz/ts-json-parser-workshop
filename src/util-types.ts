@@ -12,3 +12,5 @@ type Join<A, R extends string = ''> = A extends [infer First, ...infer Rest] ?
 export type ConcatAll <P extends Parser<string>[]> = Join<{
   [K in keyof P]: GetParserType<P[K]>
 }>;
+
+export const dummy = null;
