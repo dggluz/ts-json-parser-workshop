@@ -1,6 +1,6 @@
 class ToDoError extends Error {
   constructor(message: string, stack: string | undefined) {
-    super(`ToDo: ${message}`);
+    super(message);
 
     // Show original place where the ToDo function is called
     if (stack) {
@@ -16,12 +16,13 @@ class ToDoError extends Error {
 }
 
 export const ToDo = (message: string) => {
+  const errorMessage = `ToDo: ${message}`;
   try {
-    throw new Error('Dummy Error');
+    throw new Error(errorMessage);
   } catch (e) {
     return (...args: any[]): any => {
       const stack = e instanceof Error ? e.stack : '';
-      throw new ToDoError(message, stack);
+      throw new ToDoError(errorMessage, stack);
     };
   }
 };
