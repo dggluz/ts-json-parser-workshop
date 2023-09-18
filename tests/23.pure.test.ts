@@ -1,6 +1,6 @@
 import { pure } from '../src';
 
-describe.skip ('pure', () => {
+describe ('pure', () => {
   it('Resolves to expected string, without consuming input', async () => {
     // GIVEN:
     // A string expected value,

@@ -1,6 +1,6 @@
 import { booleanParser } from '../src';
 
-describe.skip('booleanParser', () => {
+describe('booleanParser', () => {
   it('Parses "true"', async () => {
     // GIVEN:
     // The "true" input

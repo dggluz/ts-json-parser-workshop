@@ -1,6 +1,6 @@
 import { fromStr, keepRight } from '../src';
 
-describe.skip('keepRight', () => {
+describe('keepRight', () => {
   it('"keepBar" parses "foobar"', async () => {
     // GIVEN:
     // A "keepBar" parser

@@ -1,6 +1,6 @@
 import { fromStr, map2 } from '../src';
 
-describe.skip('map2 parsers', () => {
+describe('map2 parsers', () => {
   describe('vesreParser', () => {
     it('Parses "foobar"', async () => {
       // GIVEN:

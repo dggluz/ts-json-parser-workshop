@@ -1,6 +1,6 @@
 import { digitsParser } from '../src';
 
-describe.skip('digitsParser', () => {
+describe('digitsParser', () => {
   it('Parses "1234567890"', async () => {
     // GIVEN:
     // The "1234567890" input

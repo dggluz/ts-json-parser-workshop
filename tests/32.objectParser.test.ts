@@ -1,6 +1,6 @@
 import { objectParser } from '../src';
 
-describe.skip('objectParser', () => {
+describe('objectParser', () => {
   it('Parses an empty object', async () => {
     // GIVEN:
     // A stringified empty object input

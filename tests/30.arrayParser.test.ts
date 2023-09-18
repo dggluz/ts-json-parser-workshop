@@ -1,6 +1,6 @@
 import { arrayParser } from '../src';
 
-describe.skip('Array parser', () => {
+describe('Array parser', () => {
   it('Parses the empty array', async () => {
     // GIVEN:
     // The stringified empty array input

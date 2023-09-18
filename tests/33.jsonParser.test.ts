@@ -1,6 +1,6 @@
 import { jsonParser } from '../src';
 
-describe.skip('jsonParser', () => {
+describe('jsonParser', () => {
   describe('jsonParser parses null', () => {
     it('Parses "null"', async () => {
       // GIVEN:

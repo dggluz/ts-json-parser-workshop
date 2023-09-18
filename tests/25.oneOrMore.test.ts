@@ -1,6 +1,6 @@
 import { fromStr, oneOrMore } from '../src';
 
-describe.skip('oneOrMore', () => {
+describe('oneOrMore', () => {
   it('Parses "foo"', async () => {
     // GIVEN:
     // A "oneOrMoreFoo" parser

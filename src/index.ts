@@ -1,27 +1,5 @@
-// No darle bola a esta función.
-const ToDo = (message: string) => (...args: any[]): any => {
-  throw new Error(`TODO: ${message}`);
-};
-
-// No darle bola a esta función de tipos.
-type GetParserType <T> = T extends Parser<infer U> ? U : never;
-
-// Ignorar también esta otra función de tipos (¡vaya que es fea!):
-type Join<A, R extends string = ""> = A extends [infer First, ...infer Rest] ?
-  Join<Rest, R extends ""
-    ? `${First & string}`
-    : `${R}${First & string}`>
-  : R;
-
-// ¡Y esta! Ignorarla con fuerza:
-type ConcatAll <P extends Parser<string>[]> = Join<{
-  [K in keyof P]: GetParserType<P[K]>
-}>;
-
-
-// ##########################################
-// ### AHORA SÍ, DAR BOLA A PARTIR DE ACÁ ###
-// ##########################################
+import { ToDo } from './ToDo';
+import { ConcatAll, GetParserType } from './util-types';
 
 /**
  * Un Parser es, antes que nada, algo que transforma un input en un output. Es

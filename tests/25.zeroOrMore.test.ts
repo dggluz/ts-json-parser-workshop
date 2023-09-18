@@ -1,6 +1,6 @@
 import { fromStr, zeroOrMore } from '../src';
 
-describe.skip('zeroOrMore', () => {
+describe('zeroOrMore', () => {
   it('Parses the empty string', async () => {
     // GIVEN:
     // A "zeroOrMoreFoo" parser

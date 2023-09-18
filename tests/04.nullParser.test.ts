@@ -1,6 +1,6 @@
 import { nullParser } from '../src';
 
-describe.skip('nullParser', () => {
+describe('nullParser', () => {
   it('Parses "null"', async () => {
     // GIVEN:
     // The "null" input

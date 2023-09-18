@@ -1,6 +1,6 @@
 import { escapedCharParser } from '../src';
 
-describe.skip('escapedCharParser', () => {
+describe('escapedCharParser', () => {
   it('Parses the escaped quote ("\\"")', async () => {
     // GIVEN:
     // The the escaped quote ("\"") input

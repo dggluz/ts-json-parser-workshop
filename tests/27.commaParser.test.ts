@@ -1,6 +1,6 @@
 import { commaParser } from '../src';
 
-describe.skip('Comma parser', () => {
+describe('Comma parser', () => {
   it('Parses ","', async () => {
     // GIVEN:
     // The "," input

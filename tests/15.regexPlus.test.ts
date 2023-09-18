@@ -1,6 +1,6 @@
 import { fromStr, regexPlus } from '../src';
 
-describe.skip('regexPlus', () => {
+describe('regexPlus', () => {
   it('Parses "foo"', async () => {
     // GIVEN:
     // A "fooPlus" parser

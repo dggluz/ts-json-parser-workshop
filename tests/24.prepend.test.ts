@@ -1,6 +1,6 @@
 import { prepend, pure } from '../src';
 
-describe.skip('prepend', () => {
+describe('prepend', () => {
   it('Prepends an element to a string list', async () => {
     // GIVEN:
     // A Parser<string> value,

@@ -1,6 +1,6 @@
 import { fromStr, _separatedByComma } from '../src';
 
-describe.skip('_separatedByComma', () => {
+describe('_separatedByComma', () => {
   it('Parses the empty string', async () => {
     // GIVEN:
     // A "_separatedByCommaFoo" parser

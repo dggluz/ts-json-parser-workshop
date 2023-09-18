@@ -1,6 +1,6 @@
 import { concatAll, fromStr } from '../src';
 
-describe.skip('"concatAll" parser', () => {
+describe('"concatAll" parser', () => {
   it('"fooBarBazParser" parses "foobarbaz"', async () => {
     // GIVEN:
     // A "fooBarBaz" parser,

@@ -1,6 +1,6 @@
 import { altAll, fromStr } from '../src';
 
-describe.skip('"altAll" parser', () => {
+describe('"altAll" parser', () => {
   it('"fooOrBarOrBazParser" parses "foo"', async () => {
     // GIVEN:
     // A "fooOrBarOrBaz" parser,

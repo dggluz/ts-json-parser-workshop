@@ -1,6 +1,6 @@
 import { stringParser } from '../src';
 
-describe.skip('stringParser', () => {
+describe('stringParser', () => {
   it('Parses ""', async () => {
     // GIVEN:
     // The """" input

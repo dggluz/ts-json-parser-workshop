@@ -1,6 +1,6 @@
 import { normalCharParser } from '../src';
 
-describe.skip('normalCharParser', () => {
+describe('normalCharParser', () => {
   it('Parses "f"', async () => {
     // GIVEN:
     // The "f" input

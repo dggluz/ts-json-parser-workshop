@@ -1,6 +1,6 @@
 import { fromStr } from '../src';
 
-describe.skip('fromStr parser constuctor', () => {
+describe('fromStr parser constuctor', () => {
   describe('"bar" parser', () => {
     it('Parses "bar"', async () => {
       // GIVEN:

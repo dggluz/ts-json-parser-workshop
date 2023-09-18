@@ -1,6 +1,6 @@
 import { spaceParser } from '../src';
 
-describe.skip('Space parser', () => {
+describe('Space parser', () => {
   it('Parses the empty string', async () => {
     // GIVEN:
     // The empty string input

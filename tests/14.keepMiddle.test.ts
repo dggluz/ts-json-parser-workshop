@@ -1,6 +1,6 @@
 import { fromStr, keepMiddle } from '../src';
 
-describe.skip('keepMiddle', () => {
+describe('keepMiddle', () => {
   it('"keepBar" parses "foobarbaz"', async () => {
     // GIVEN:
     // A "keepBar" parser

@@ -1,6 +1,6 @@
 import { fromStr, map } from '../src';
 
-describe.skip('map parsers', () => {
+describe('map parsers', () => {
   describe('UpperCased "foo" parser', () => {
     it('Parses "foo"', async () => {
       // GIVEN:

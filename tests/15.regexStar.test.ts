@@ -1,6 +1,6 @@
 import { fromStr, regexStar } from '../src';
 
-describe.skip('regexStar', () => {
+describe('regexStar', () => {
   it('Parses the empty string', async () => {
     // GIVEN:
     // A "fooStar" parser

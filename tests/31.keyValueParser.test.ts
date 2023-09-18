@@ -1,6 +1,6 @@
 import { keyValueParser } from '../src';
 
-describe.skip('keyValueParser', () => {
+describe('keyValueParser', () => {
   it('Parses a keyValue pair ("foo" key, null value)', async () => {
     // GIVEN:
     // A keyValue pair ("foo" key, null value) string input
