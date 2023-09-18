@@ -7,7 +7,8 @@
   "scripts": {
     "build": "rm -rf build && tsc",
     "build-test-reporter": "rm -rf progressive-reporter/dist && tsc --project progressive-reporter/tsconfig.json",
-    "test": "jest"
+    "run-tests": "jest --watchAll",
+    "test": "npm run build-test-reporter && npm run run-tests"
   },
   "repository": {
     "type": "git",
